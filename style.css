@@ -158,6 +158,8 @@ body:not(.dark) .navlink li a {
   body:not(.dark) .navlink li a:hover {
     background: rgba(0,0,0,0.12);
   }
+
+ 
 }
 
 
@@ -165,3 +167,226 @@ body:not(.dark) .navlink li a {
 /* nav-finished */
 
 
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+
+  flex-wrap: wrap;        /* 🔑 allows stacking on mobile */
+  padding: 70px 80px 0;
+}
+
+
+
+.heroleft {
+  max-width: 720px;
+  gap:40px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 25px;
+  margin-bottom: 18px;
+
+  background: rgba(99,102,241,0.12);
+  color: #6366f1;
+}
+
+body.dark .hero-badge {
+  background: rgba(99,102,241,0.2);
+  color: #a5b4fc;
+}
+.hero-title {
+  font-size: 98px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.crypto-text {
+  color: inherit;
+}
+.pro-text {
+  background: linear-gradient(90deg, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-desc {
+  font-size: 28px;
+  line-height: 1.6;
+  max-width: 620px;
+  margin-bottom: 36px;
+
+  color: #4b5563;
+}
+
+body.dark .hero-desc {
+  color: #9ca3af;
+}
+.hero-actions {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.btn {
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-size: 26px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: white;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.15);
+  color: inherit;
+}
+
+body.dark .btn.secondary {
+  border-color: rgba(255,255,255,0.25);
+}
+.hero-features {
+  display: flex;
+  gap: 24px;
+  font-size: 24px;
+  color: #16a34a;
+}
+
+body.dark .hero-features {
+  color: #22c55e;
+}
+
+
+/* hero right */
+
+.heroright {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 600px;
+}
+
+/* Glass Card */
+.market-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+/* Dark mode */
+body.dark .market-card {
+  background: rgba(0,0,0,0.35);
+}
+
+.market-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.market-header h3 {
+  font-size: 18px;
+}
+
+.live-dot {
+  background: #16a34a;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Coin rows */
+.coin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.coin:last-child {
+  border-bottom: none;
+}
+
+.coin-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coin-left img {
+  width: 34px;
+  height: 34px;
+}
+
+.coin-left p {
+  font-weight: 600;
+}
+
+.coin-left span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.coin-right {
+  text-align: right;
+}
+
+.price {
+  font-weight: 600;
+}
+
+.change {
+  font-size: 13px;
+}
+
+.change.up {
+  color: #22c55e;
+}
+
+.change.down {
+  color: #ef4444;
+}
+
+/* Button */
+.view-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
+  color: white;
+  cursor: pointer;
+}
+
+.coin {
+  transition: background 0.25s ease;
+}
+
+.coin:hover {
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+}
+
+body.dark .coin:hover {
+  background: rgba(255,255,255,0.06);
+}
