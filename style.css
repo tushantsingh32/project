@@ -4,12 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* ===== FORCE TRANSPARENT DESKTOP NAV LINKS ===== */
-.navlink,
-.navlink li,
-.navlink li a {
-  background-color: transparent !important;
-}
+
 
 
 ul {
@@ -95,72 +90,7 @@ body:not(.dark) .navlink li a {
 
 /* ================= MOBILE MENU ================= */
 /* ================= MOBILE MENU ================= */
-@media (max-width: 768px) {
 
-  .humburger {
-    display: block;
-    color: white;
-  }
-
-  /* MENU CONTAINER – GLASS BACKGROUND */
-  .navlink {
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    width: 220px;
-
-    background: rgba(17, 24, 39, 0.75); /* 🔥 dark glass */
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-
-    padding: 10px;
-    border-radius: 14px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
-
-    flex-direction: column;
-    gap: 10px;
-    display: none;
-  }
-
-  .navlink.show {
-    display: flex;
-  }
-
-  /* EACH LINK AS A BUTTON */
-  .navlink li a {
-    display: block;
-    padding: 12px 16px;
-    border-radius: 10px;
-
-    background: rgba(255,255,255,0.08);
-    color: white;
-    text-decoration: none;
-
-    transition: background 0.25s ease, transform 0.2s ease;
-  }
-
-  .navlink li a:hover {
-    background: rgba(255,255,255,0.18);
-    transform: translateX(-2px);
-  }
-
-  /* LIGHT MODE MENU */
-  body:not(.dark) .navlink {
-    background: rgba(255,255,255,0.85); /* 🔥 light glass */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  }
-
-  body:not(.dark) .navlink li a {
-    background: rgba(0,0,0,0.06);
-    color: #0b0b0c;
-  }
-
-  body:not(.dark) .navlink li a:hover {
-    background: rgba(0,0,0,0.12);
-  }
-
- 
-}
 
 
 
@@ -275,7 +205,7 @@ body.dark .hero-features {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 600px;
+  min-height: ;
 }
 
 /* Glass Card */
@@ -389,4 +319,60 @@ body.dark .market-card {
 
 body.dark .coin:hover {
   background: rgba(255,255,255,0.06);
+}
+
+
+/* ================= SAFE PHONE PATCH ================= */
+@media (max-width: 768px) {
+
+  /* HERO: only reduce padding */
+  .hero {
+    padding: 40px 20px 40px;
+  }
+
+  /* TEXT: scale down, keep structure */
+  .hero-title {
+    font-size: 48px;   /* was 98px */
+    line-height: 1.2;
+  }
+
+  .hero-desc {
+    font-size: 18px;   /* was 28px */
+  }
+
+  .hero-badge {
+    font-size: 14px;
+  }
+
+  /* BUTTONS: make usable on phone */
+  .btn {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+
+  /* FEATURES: allow wrap instead of column */
+  .hero-features {
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  /* HERO RIGHT: DO NOT break centering logic */
+  .heroright {
+    min-height: 600px;   /* keep original logic */
+  }
+
+  /* MARKET CARD: just width control */
+  .market-card {
+    max-width: 100%;
+  }
+
+  /* NAVBAR */
+  .navname h1 {
+    font-size: 20px;
+  }
+
+  .light {
+    height: 36px;
+    width: 36px;
+  }
 }
