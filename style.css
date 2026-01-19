@@ -205,7 +205,6 @@ body.dark .hero-features {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: ;
 }
 
 /* Glass Card */
@@ -323,6 +322,56 @@ body.dark .coin:hover {
 
 
 /* ================= SAFE PHONE PATCH ================= */
+/* ================= MOBILE NAVBAR (RESTORED) ================= */
+@media (max-width: 768px) {
+
+  .humburger {
+    display: block;
+    color: white;
+  }
+
+  .navlink {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 220px;
+
+    background: rgba(17, 24, 39, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+
+    flex-direction: column;
+    gap: 10px;
+    display: none; /* 🔴 default hidden */
+    z-index: 1000;
+  }
+
+  .navlink.show {
+    display: flex; /* ✅ hamburger controls this */
+  }
+
+  .navlink li a {
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    text-decoration: none;
+  }
+
+  body:not(.dark) .navlink {
+    background: rgba(255,255,255,0.85);
+  }
+
+  body:not(.dark) .navlink li a {
+    background: rgba(0,0,0,0.06);
+    color: #0b0b0c;
+  }
+}
+
 @media (max-width: 768px) {
 
   /* HERO: only reduce padding */
