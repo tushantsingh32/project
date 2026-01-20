@@ -79,3 +79,4 @@ function updateMetal(prefix, rate) {
 
 loadMarket();
 setInterval(loadMarket, 10000); // refresh every 10 seconds
+
