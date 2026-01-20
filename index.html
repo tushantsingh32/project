@@ -180,6 +180,160 @@
     <button class="btn red">WHATSAPP US</button>
   </div>
 </section>
+
+      <section class="ps-section">
+
+  <h2 class="ps-heading">
+    Choose the plan that's right for Growing up
+  </h2>
+
+  <div class="swiper psSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- SLIDE1 -->
+      <div class="swiper-slide">
+        <div class="ps-slide">
+          <img src="/assets/goldimage.webp" />
+
+          <div class="ps-overlay">
+            <h3>Commodity Package</h3>
+
+            <p class="ps-price">
+              ₹35,499/wk <span>₹45,499/mo</span>
+            </p>
+
+            <ul>
+              <li>✔ 3–4 Free Trading Calls</li>
+              <li>✔ Weekly Package</li>
+              <li>✔ Monthly Package</li>
+            </ul>
+
+            <div class="ps-buttons">
+              <a href="tel:+919259485189" class="btn green">CALL US</a>
+              <a href="#" class="btn red">GET DETAILS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE2 -->
+      <div class="swiper-slide">
+        <div class="ps-slide">
+          <img src="/assets/cryptoimage.webp" />
+
+          <div class="ps-overlay">
+            <h3>Crypto Package</h3>
+
+            <p class="ps-price">
+              ₹55,499/wk <span>₹65,499/mo</span>
+            </p>
+
+            <ul>
+              <li>✔ 3–4 Free Trading Calls</li>
+              <li>✔ Weekly Package</li>
+              <li>✔ Monthly Package</li>
+            </ul>
+
+            <div class="ps-buttons">
+              <a href="tel:+919259485189" class="btn green">CALL US</a>
+              <a href="#" class="btn red">GET DETAILS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE3 -->
+      <div class="swiper-slide">
+        <div class="ps-slide">
+          <img src="/assets/equityimage.jpeg" />
+
+          <div class="ps-overlay">
+            <h3>Equity Package</h3>
+
+            <p class="ps-price">
+              ₹25,499/wk <span>₹35,499/mo</span>
+            </p>
+
+            <ul>
+              <li>✔ 3–4 Free Trading Calls</li>
+              <li>✔ Weekly Package</li>
+              <li>✔ Monthly Package</li>
+            </ul>
+
+            <div class="ps-buttons">
+              <a href="tel:+919259485189" class="btn green">CALL US</a>
+              <a href="#" class="btn red">GET DETAILS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- SLIDE -->
+      <div class="swiper-slide">
+        <div class="ps-slide">
+          <img src="/assets/currencyimage.png" />
+
+          <div class="ps-overlay">
+            <h3>Currency Package</h3>
+
+            <p class="ps-price">
+              ₹25,499/wk <span>₹35,499/mo</span>
+            </p>
+
+            <ul>
+              <li>✔ 3–4 Free Trading Calls</li>
+              <li>✔ Weekly Package</li>
+              <li>✔ Monthly Package</li>
+            </ul>
+
+            <div class="ps-buttons">
+              <a href="tel:+919259485189" class="btn green">CALL US</a>
+              <a href="#" class="btn red">GET DETAILS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- SLIDE -->
+      <div class="swiper-slide">
+        <div class="ps-slide">
+          <img src="/assets/equityimage.jpeg" />
+
+          <div class="ps-overlay">
+            <h3>Equity Package</h3>
+
+            <p class="ps-price">
+              ₹25,499/wk <span>₹35,499/mo</span>
+            </p>
+
+            <ul>
+              <li>✔ 3–4 Free Trading Calls</li>
+              <li>✔ Weekly Package</li>
+              <li>✔ Monthly Package</li>
+            </ul>
+
+            <div class="ps-buttons">
+              <a href="tel:+919259485189" class="btn green">CALL US</a>
+              <a href="#" class="btn red">GET DETAILS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+</section>
+
+      
     <section class="review-section">
   <p class="review-small">Reviews</p>
   <h2 class="review-title">
@@ -328,5 +482,26 @@
 
     <script src="script.js"></script>
     <script src="test/testscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+new Swiper(".psSwiper", {
+  slidesPerView: 1.2,
+  centeredSlides: true,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1.4
+    },
+    1200: {
+      slidesPerView: 1.8
+    }
+  }
+});
+</script>
 </body>
 </html>
